@@ -1,11 +1,11 @@
 # Dockerised Jolokia Proxy
 
-[Dockerfile](https://github.com/BalaclavaLab/docker-jolokia)
+[Dockerfile](https://github.com/alvarolmedo/docker-jolokia-proxy)
 
 Run standalone:
 
 ```sh
-docker run -d --name jolokia -p 8080:8080 balaclavalab/jolokia
+docker run -d --name jolokia -p 8080:8080 alvarolmedo/jolokia-proxy
 ```
 
 Kubernetes container snippet (add to Telegraf or a standalone deployment):
@@ -13,7 +13,7 @@ Kubernetes container snippet (add to Telegraf or a standalone deployment):
 ```yml
 containers:
 - name: jolokia
-  image: balaclavalab/jolokia
+  image: alvarolmedo/jolokia-proxy
   ports:
   - containerPort: 8080
   resources:
